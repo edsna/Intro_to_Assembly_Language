@@ -40,6 +40,10 @@ _main:
 	movl	%edx, 8(%esp)		#Assigns second integer onto the stack
 	movl	%eax, 4(%esp)		#Assigns first value onto the stack
 	movl	$LC3, (%esp)		#Moves LC3-answer to the stack
-	call	_printf			#prints the answer
+	call	_printf			#
 	leave
 	ret
+	.ident	"GCC: (tdm64-1) 5.1.0"
+	.def	_puts;	.scl	2;	.type	32;	.endef
+	.def	_scanf;	.scl	2;	.type	32;	.endef
+	.def	_printf;	.scl	2;	.type	32;	.endef
