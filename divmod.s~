@@ -19,7 +19,7 @@ main:
 	movl	%eax, 12(%esp)	 #Assignment
 	movl	$0x14, 8(%esp)	 #Assignment
 	movl	$0x33, 4(%esp)	 #Assignment
-	movl	$.LC0, (%esp)	 #
+	movl	$.LC0, (%esp)	 #Assignment
 	call	printf	 	 #Calls print function
 	
 	leave			 #copies EBP to ESP and then restores the old EBP from the stack.

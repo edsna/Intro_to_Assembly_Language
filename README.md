@@ -12,3 +12,5 @@ gcc –m32 –o fileName fileName.s >> Links fileName to its old fileName in cas
 objump –d fileName >> runs the machine code using command line
 
 All fileName.c files were added for the purpose of testing 
+
+

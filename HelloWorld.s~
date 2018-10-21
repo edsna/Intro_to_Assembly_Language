@@ -30,4 +30,4 @@ _main:
 	ret
 
 	#What is %esp - I guess it is what points to the top of the stack
-	# For every string you add, you need to make sure you have a LCO for it, move it onto the stack then call puts in Maincd 
+	# For every string you add, you need to make sure you have a LCO for it and move it onto the stack

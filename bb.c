@@ -11,4 +11,5 @@
 void main(){
 	printf("Hello World!\n");
 	printf("Welome to Assembly.\n");
+	printf("Testing Sentence.\n");
 }
