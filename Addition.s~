@@ -35,15 +35,11 @@ _main:
 	
 	movl	28(%esp), %eax	#moves 28(%esp) to the register %eax
 	movl	24(%esp), %edx	#moves 24(%esp) to the register %edx
-	leal	(%eax,%edx), %ecx	#Stores addition of eax and edx onto ecx performs addition
+	andl	(%eax,%edx), %ecx	#Stores addition of eax and edx onto ecx performs addition
 	movl	%ecx, 12(%esp)		#Assign addition of first and second values to stack
 	movl	%edx, 8(%esp)		#Assigns second integer onto the stack
 	movl	%eax, 4(%esp)		#Assigns first value onto the stack
 	movl	$LC3, (%esp)		#Moves LC3-answer to the stack
-	call	_printf			#
+	call	_printf			#prints the answer
 	leave
 	ret
-	.ident	"GCC: (tdm64-1) 5.1.0"
-	.def	_puts;	.scl	2;	.type	32;	.endef
-	.def	_scanf;	.scl	2;	.type	32;	.endef
-	.def	_printf;	.scl	2;	.type	32;	.endef

@@ -2,7 +2,7 @@
 LC0:
 	.ascii "Enter the first number: \0"
 LC1:
-	.ascii "%d\0"
+	.ascii "%d\0
 LC2:
 	.ascii "Enter the second number: \0"
 LC3:
