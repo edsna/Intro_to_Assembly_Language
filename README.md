@@ -11,6 +11,8 @@ gcc –m32 –o fileName fileName.s >> Links fileName to its old fileName in cas
 
 objdump –d fileName >> runs the machine code using command line
 
+gcc –m32 –o fileName fileName.s >> Compiles .s files which can then be run independently
+
 All fileName.c files were added for the purpose of testing 
 
 
