@@ -22,7 +22,7 @@ main:
 	movl	$.LC0, (%esp)   #Moves prompt to top of the stack
 	call	puts            #Calls prompt
 	leal	28(%esp), %eax  #stores value of n/prompt, 8(%esp) into %eax - top pf stack
-	movl	%eax, 4(%esp)   #Move it to some other location in the stack 4(%esp) so i don't crush
+	movl	%eax, 4(%esp)   #Move it to some other location in the stack 4(%esp) so i d
 	movl	$.LC1, (%esp)   #Move scanner to top of stack
 	call	__isoc99_scanf  #Calls the Scanner for prompt
 	movl	28(%esp), %ecx  #Store n into register ecx

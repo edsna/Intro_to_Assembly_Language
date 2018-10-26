@@ -1,4 +1,4 @@
-	.file	"HelloWorld.c"
+
 LC0:
 	.string "Hello World!\0"
 LC1:
@@ -7,6 +7,8 @@ LC2:
 	.string "This line was added in the assembly version of the file HelloWorld.c \0"
 LC3:
 	.string "This line was also added in the Assembly file.\0"
+LC4:
+	.string "Also added in the Assembly file.\0"
 	.globl	_main
 
 _main:
@@ -26,6 +28,8 @@ _main:
 	call	_puts		#Prints third string/argument
 	movl	$LC3, (%esp)	#Put fourth argument into %esp
 	call	_puts		#Prints fourth string/argument
+	movl	$LC4, (%esp)	#Put fourth argument into %esp
+	call	_puts		#Prints fith string/argument
 	leave
 	ret
 

@@ -8,11 +8,13 @@ gcc –m32 –O1 –S fileName.c >> is used to convert the instructions on fileN
 NOTE that comments are not converted from C to assembly 
 
 gcc –m32 –o fileName fileName.s >> Links fileName to its old fileName in case it have been edited
+Note that through the COmmand Prompt in Wondows you compile the code as explained above but run it the same way you run a .c file after compilation
 
 objdump –d fileName >> runs the machine code using command line
 
 gcc –m32 –o fileName fileName.s >> Compiles .s files which can then be run independently
 
 All fileName.c files were added for the purpose of testing 
+
 
 
