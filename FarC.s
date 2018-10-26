@@ -24,14 +24,16 @@ _main:
 
 	#Storing input value from scanf
 	movl	28(%esp), %edx
+	movl	%edx,%ecx
 
 	#performing the conversion
 	subl	$32, %edx		#%eax = %eax-$32
-	imul	$2, %edx, %ecx		#(5.0/9.0)*%eax
+	imul	$2, %edx		#(5.0/9.0)*%eax
 
 	#Move answer to correct place
-	movl	%ecx, 12(%esp)		#Move answer to top of stack
+	movl	%ecx, 4(%esp)
 	movl	%edx, 8(%esp)		#Move input to top of stack
+	
 	movl	$LC2, (%esp)		#Move Answer to top of stack
 	call	_printf			#prints the answer
 	leave
