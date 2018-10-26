@@ -23,18 +23,23 @@ _main:
 	call	_scanf		#Calls scanf
 
 	#Storing input value from scanf
-	movl	28(%esp), %edx
-	movl	%edx,%ecx
+	movl	28(%esp), %edx	#Stores the input
+	movl	%edx,%ecx	#Moves input toseparate register for effective printout
 
 	#performing the conversion
+	movl	$9, %edx
+	movl	$5, %eax
+	idivl	%edx, %eax
+	movl	%edx, %ebx
+	
 	subl	$32, %edx		#%eax = %eax-$32
-	imul	$2, %edx		#(5.0/9.0)*%eax
+	imul	(%ebx), %edx		#(5.0/9.0)*%eax
 
 	#Move answer to correct place
-	movl	%ecx, 12
-	movl	%edx, 8(%esp)		#Move input to top of stack
+	movl	%ecx, 4(%esp)		#Move input to top of stack
+	movl	%edx, 8(%esp)		#Move answer to top of stack
 	
-	movl	$LC2, (%esp)		#Move Answer to top of stack
+	movl	$LC2, (%esp)		#Move Answer string to top of stack
 	call	_printf			#prints the answer
 	leave
 	ret
