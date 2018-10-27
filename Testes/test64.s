@@ -1,11 +1,7 @@
-	.file	"test.c"
-	.def	___main;	.scl	2;	.type	32;	.endef
-	.section .rdata,"dr"
+
 LC0:
 	.ascii "%d plus %d equals: %d \12\0"
-	.text
 	.globl	_main
-	.def	_main;	.scl	2;	.type	32;	.endef
 _main:
 	pushl	%ebp
 	movl	%esp, %ebp
@@ -19,5 +15,3 @@ _main:
 	call	_printf
 	leave
 	ret
-	.ident	"GCC: (tdm64-1) 5.1.0"
-	.def	_printf;	.scl	2;	.type	32;	.endef
