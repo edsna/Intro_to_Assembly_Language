@@ -1,4 +1,6 @@
 
+
+
 LC0:
 	.string "Enter the temperature in degrees Farenheit: \0"
 LC1:
@@ -27,13 +29,8 @@ _main:
 	movl	%edx,%ecx	#Moves input toseparate register for effective printout
 
 	#performing the conversion
-	movl	$9, %edx
-	movl	$5, %eax
-	idivl	%edx, %eax
-	movl	%edx, %ebx
-	
 	subl	$32, %edx		#%eax = %eax-$32
-	imul	(%ebx), %edx		#(5.0/9.0)*%eax
+	imul	$0,5, %edx		#(5.0/9.0)*%eax
 
 	#Move answer to correct place
 	movl	%ecx, 4(%esp)		#Move input to top of stack

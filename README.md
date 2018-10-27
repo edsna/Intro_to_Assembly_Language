@@ -16,5 +16,5 @@ gcc –m32 –o fileName fileName.s >> Compiles .s files which can then be run i
 
 All fileName.c files were added for the purpose of testing 
 
-
+You can chose to ignre all the .exe files in the folder, they're generated when I compile the files -I'm using windows.
 

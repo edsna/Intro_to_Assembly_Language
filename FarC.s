@@ -1,3 +1,7 @@
+@author: Edson Zandamela
+
+#This program prompts a user for a temperature in degrees Farenheit then prints the #result in degrees Celsius with 3 decimal points
+
 
 LC0:
 	.string "Enter the temperature in degrees Farenheit: \0"
@@ -28,7 +32,7 @@ _main:
 
 	#performing the conversion
 	subl	$32, %edx		#%eax = %eax-$32
-	imul	$2, %edx		#(5.0/9.0)*%eax
+	imul	$0,5, %edx		#(5.0/9.0)*%eax
 
 	#Move answer to correct place
 	movl	%ecx, 4(%esp)		#Move input to top of stack
