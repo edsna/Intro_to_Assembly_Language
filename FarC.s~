@@ -1,4 +1,6 @@
+@author: Edson Zandamela
 
+#This program prompts a user for a temperature in degrees Farenheit then prints the #result in degrees Celsius with 3 decimal points
 
 
 LC0:
@@ -30,6 +32,7 @@ _main:
 
 	#performing the conversion
 	subl	$32, %edx		#%eax = %eax-$32
+	#The next line is where I've been trying to make the 
 	imul	$0,5, %edx		#(5.0/9.0)*%eax
 
 	#Move answer to correct place
