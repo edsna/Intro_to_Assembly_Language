@@ -1,4 +1,3 @@
-	.file	"Addition.c"
 LC0:
 	.ascii "Enter the first number: \0"
 LC1:
