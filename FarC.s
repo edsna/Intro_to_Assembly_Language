@@ -32,7 +32,7 @@ _main:
 
 	#performing the conversion
 	subl	$32, %edx		#%eax = %eax-$32
-	#The next line is where I've unsuccessfully been trying to perform the operation using a decimal number 
+	#The next line is where I've unsuccessfully been trying to perform the operation using a decimal number	 
 	imul	$0,5, %edx		#(5.0/9.0)*%eax
 
 	#Move answer to correct place
